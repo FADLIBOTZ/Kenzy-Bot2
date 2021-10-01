@@ -278,8 +278,7 @@ remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "ht
 
 }
 
-let ikyads = await getBuffer (`https://telegra.ph/file/5fdf07d994245f918d464.jpg`)
-
+let ikyads = await getBuffer(`https://telegra.ph/file/4e819af4e326d36c1ff60.jpg`)
 
         let d = new Date
        let locale = 'id'
@@ -849,6 +848,10 @@ let ikyads = await getBuffer (`https://telegra.ph/file/5fdf07d994245f918d464.jpg
 	    }
 	
 	
+		// Auto Read
+        ikyy.chatRead(from, "read")
+        
+		
         
        // CMD
         if (isCmd && !isGroup)
@@ -5263,14 +5266,17 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
              reply(`${e}`)
 }
              break
-      case 'hidetag':
+
+		
+	case 'hidetag':
+            if (!isGroupAdmins) return reply(mess.only.admin)
              try {
-             quotedText = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+             quotedText = kyy.message.extendedTextMessage.contextInfo.quotedMessage.conversation
              hideTag(from, `${quotedText}`)
              } catch {
              hideTag(from, `${q}`)
 }
-             break
+             break			      
       case 'sider':
              if(!isGroup) return reply(mess.only.group)
              try {
