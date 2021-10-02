@@ -5,10 +5,10 @@ const fs = require("fs-extra")
 
 const { getBuffer } = require('../lib/myfunc')
 const { color, bgcolor } = require('../lib/color')
-join = '\`\`\`New Member\`\`\` \n \`\`\`Nama :\`\`\` \n \`\`\`Askot : \`\`\` \n \`\`\`Umur :\`\`\` \n \`\`\`Status :\`\`\` \n\n - [   ] -'
+jowin = '\`\`\`New Member\`\`\` \n \`\`\`Nama :\`\`\` \n \`\`\`Askot : \`\`\` \n \`\`\`Umur :\`\`\` \n \`\`\`Status :\`\`\` \n\n - [   ] -'
 leave = '\`\`\`Sayonaraa\`\`\`'
 
-teks = `${join}`
+jooin = `${jowin}`
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 
 module.exports = welcome = async (ikyy, anu) => {
@@ -58,7 +58,7 @@ module.exports = welcome = async (ikyy, anu) => {
 
         buttonsMessage = {
 
-          contentText: `${teks}`,
+          contentText: `${jooin}`,
 
           footerText: "KenzyBotz~",
 
