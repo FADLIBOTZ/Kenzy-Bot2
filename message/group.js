@@ -58,7 +58,7 @@ module.exports = welcome = async (ikyy, anu) => {
 
         buttonsMessage = {
 
-          contentText: `${jooin}`,
+          contentText: '*HALO KAK ${pushname} WELCOME IN GC ${mdata.subject}*',
 
           footerText: "KenzyBotz~",
 
